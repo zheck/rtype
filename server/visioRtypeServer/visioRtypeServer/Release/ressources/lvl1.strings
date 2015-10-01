@@ -1,0 +1,19 @@
+/* 
+  lvl1.strings
+  R-TypeServer
+
+  Created by Zhou Fong on 11/8/13.
+  Copyright (c) 2013 Zhou Fong. All rights reserved.
+*/
+
+1000=SHOCKWAVE
+2000=MINION
+3000=ASTEROID
+5000=MINION
+8000=MINION
+9000=ASTEROID
+10000=MINION
+11000=SHOCKWAVE
+12000=BOSS
+15000=MINION
+18000=MINION

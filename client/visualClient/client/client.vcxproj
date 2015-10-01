@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7547392F-D7A7-4D0B-9A29-D45106627BF7}</ProjectGuid>
+    <RootNamespace>client</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\SFML-2-1.1\include;..\..\src\;..\..\src\ClockManager\;..\..\src\Defines\;..\..\src\Game\;..\..\src\KeyManager\;..\..\src\Menu\;..\..\src\Render\;..\..\src\Render\EntityRender\;..\..\src\Socket\;..\..\src\SoundManager\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>..\SFML-2-1.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\SFML-2-1.1\include;..\..\src\;..\..\src\ClockManager\;..\..\src\Defines\;..\..\src\Game\;..\..\src\KeyManager\;..\..\src\Menu\;..\..\src\Render\;..\..\src\Render\EntityRender\;..\..\src\Socket\;..\..\src\SoundManager\;..\..\Resources\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>..\SFML-2-1.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-window.lib;sfml-system.lib;sfml-network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\Resources\createButton.png" />
+    <None Include="..\..\Resources\createInput.png" />
+    <None Include="..\..\Resources\createRoomButton.png" />
+    <None Include="..\..\Resources\createRoomButtonOriginal.png" />
+    <None Include="..\..\Resources\disabledButton.png" />
+    <None Include="..\..\Resources\enabledButton.png" />
+    <None Include="..\..\Resources\gameBackground.png" />
+    <None Include="..\..\Resources\gameBackground3.png" />
+    <None Include="..\..\Resources\gameBackground4.png" />
+    <None Include="..\..\Resources\joinButton2.png" />
+    <None Include="..\..\Resources\login.png" />
+    <None Include="..\..\Resources\menuSpaceShip.png" />
+    <None Include="..\..\Resources\r-typesheet1.gif" />
+    <None Include="..\..\Resources\r-typesheet10.gif" />
+    <None Include="..\..\Resources\r-typesheet11.gif" />
+    <None Include="..\..\Resources\r-typesheet12.gif" />
+    <None Include="..\..\Resources\r-typesheet13.gif" />
+    <None Include="..\..\Resources\r-typesheet14.gif" />
+    <None Include="..\..\Resources\r-typesheet16.gif" />
+    <None Include="..\..\Resources\r-typesheet17.gif" />
+    <None Include="..\..\Resources\r-typesheet18.gif" />
+    <None Include="..\..\Resources\r-typesheet19.gif" />
+    <None Include="..\..\Resources\r-typesheet2.gif" />
+    <None Include="..\..\Resources\r-typesheet20.gif" />
+    <None Include="..\..\Resources\r-typesheet21.gif" />
+    <None Include="..\..\Resources\r-typesheet22.gif" />
+    <None Include="..\..\Resources\r-typesheet23.gif" />
+    <None Include="..\..\Resources\r-typesheet24.gif" />
+    <None Include="..\..\Resources\r-typesheet25.gif" />
+    <None Include="..\..\Resources\r-typesheet26.gif" />
+    <None Include="..\..\Resources\r-typesheet27.gif" />
+    <None Include="..\..\Resources\r-typesheet28.gif" />
+    <None Include="..\..\Resources\r-typesheet29.gif" />
+    <None Include="..\..\Resources\r-typesheet3.gif" />
+    <None Include="..\..\Resources\r-typesheet30.gif" />
+    <None Include="..\..\Resources\r-typesheet30a.gif" />
+    <None Include="..\..\Resources\r-typesheet31.gif" />
+    <None Include="..\..\Resources\r-typesheet32.gif" />
+    <None Include="..\..\Resources\r-typesheet33.gif" />
+    <None Include="..\..\Resources\r-typesheet34.gif" />
+    <None Include="..\..\Resources\r-typesheet35.gif" />
+    <None Include="..\..\Resources\r-typesheet36.gif" />
+    <None Include="..\..\Resources\r-typesheet37.gif" />
+    <None Include="..\..\Resources\r-typesheet38.gif" />
+    <None Include="..\..\Resources\r-typesheet39.gif" />
+    <None Include="..\..\Resources\r-typesheet40.gif" />
+    <None Include="..\..\Resources\r-typesheet41.gif" />
+    <None Include="..\..\Resources\r-typesheet42.gif" />
+    <None Include="..\..\Resources\r-typesheet43.gif" />
+    <None Include="..\..\Resources\r-typesheet44-2.gif" />
+    <None Include="..\..\Resources\r-typesheet44.gif" />
+    <None Include="..\..\Resources\r-typesheet5.gif" />
+    <None Include="..\..\Resources\r-typesheet7.gif" />
+    <None Include="..\..\Resources\r-typesheet8.gif" />
+    <None Include="..\..\Resources\r-typesheet9.gif" />
+    <None Include="..\..\Resources\room.png" />
+    <None Include="..\..\Resources\sansation.ttf" />
+    <None Include="..\..\Resources\selectedArea.png" />
+    <None Include="..\..\Resources\Sound\click.wav" />
+    <None Include="..\..\Resources\Sound\explosion.wav" />
+    <None Include="..\..\Resources\Sound\flip1.wav" />
+    <None Include="..\..\Resources\Sound\game.ogg" />
+    <None Include="..\..\Resources\Sound\gameofthrones.ogg" />
+    <None Include="..\..\Resources\Sound\hit-02.wav" />
+    <None Include="..\..\Resources\Sound\keyStroke.wav" />
+    <None Include="..\..\Resources\Sound\laser.wav" />
+    <None Include="..\..\Resources\Sound\select.wav" />
+    <None Include="..\..\Resources\Sound\switch.wav" />
+    <None Include="..\..\Resources\space.png" />
+    <None Include="..\..\Resources\starcraft.ttf" />
+    <None Include="..\..\Resources\startGameButton.png" />
+    <None Include="..\..\Resources\unselectedArea.png" />
+    <None Include="..\..\rtype\client\Resources\createButton.png" />
+    <None Include="..\..\rtype\client\Resources\createInput.png" />
+    <None Include="..\..\rtype\client\Resources\createRoomButton.png" />
+    <None Include="..\..\rtype\client\Resources\createRoomButtonOriginal.png" />
+    <None Include="..\..\rtype\client\Resources\disabledButton.png" />
+    <None Include="..\..\rtype\client\Resources\enabledButton.png" />
+    <None Include="..\..\rtype\client\Resources\gameBackground.png" />
+    <None Include="..\..\rtype\client\Resources\gameBackground3.png" />
+    <None Include="..\..\rtype\client\Resources\gameBackground4.png" />
+    <None Include="..\..\rtype\client\Resources\joinButton2.png" />
+    <None Include="..\..\rtype\client\Resources\login.png" />
+    <None Include="..\..\rtype\client\Resources\menuSpaceShip.png" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet1.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet10.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet11.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet12.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet13.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet14.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet16.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet17.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet18.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet19.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet2.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet20.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet21.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet22.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet23.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet24.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet25.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet26.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet27.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet28.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet29.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet3.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet30.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet30a.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet31.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet32.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet33.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet34.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet35.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet36.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet37.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet38.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet39.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet40.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet41.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet42.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet43.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet44-2.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet44.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet5.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet7.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet8.gif" />
+    <None Include="..\..\rtype\client\Resources\r-typesheet9.gif" />
+    <None Include="..\..\rtype\client\Resources\room.png" />
+    <None Include="..\..\rtype\client\Resources\sansation.ttf" />
+    <None Include="..\..\rtype\client\Resources\selectedArea.png" />
+    <None Include="..\..\rtype\client\Resources\Sound\click.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\explosion.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\flip1.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\game.ogg" />
+    <None Include="..\..\rtype\client\Resources\Sound\gameofthrones.ogg" />
+    <None Include="..\..\rtype\client\Resources\Sound\hit-02.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\keyStroke.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\laser.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\select.wav" />
+    <None Include="..\..\rtype\client\Resources\Sound\switch.wav" />
+    <None Include="..\..\rtype\client\Resources\space.png" />
+    <None Include="..\..\rtype\client\Resources\starcraft.ttf" />
+    <None Include="..\..\rtype\client\Resources\startGameButton.png" />
+    <None Include="..\..\rtype\client\Resources\unselectedArea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Client.cpp" />
+    <ClCompile Include="..\..\src\ClockManager\ClockManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Entity.cpp" />
+    <ClCompile Include="..\..\src\Game\Game.cpp" />
+    <ClCompile Include="..\..\src\Game\GameEnd.cpp" />
+    <ClCompile Include="..\..\src\Game\GameTime.cpp" />
+    <ClCompile Include="..\..\src\Game\Player.cpp" />
+    <ClCompile Include="..\..\src\KeyManager\KeyManager.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Menu\InRoom.cpp" />
+    <ClCompile Include="..\..\src\Menu\Menu.cpp" />
+    <ClCompile Include="..\..\src\Menu\RoomSelection.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\AsteroidRender.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\BossRender.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\BulletRender.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\MinionRender.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\PlayerRender.cpp" />
+    <ClCompile Include="..\..\src\Render\EntityRender\ShockWaveRender.cpp" />
+    <ClCompile Include="..\..\src\Render\GameRender.cpp" />
+    <ClCompile Include="..\..\src\Render\MenuRender.cpp" />
+    <ClCompile Include="..\..\src\Render\Render.cpp" />
+    <ClCompile Include="..\..\src\Render\RoomRender.cpp" />
+    <ClCompile Include="..\..\src\Render\RoomSelectionRender.cpp" />
+    <ClCompile Include="..\..\src\ResourcePath.cpp" />
+    <ClCompile Include="..\..\src\Socket\Message.cpp" />
+    <ClCompile Include="..\..\src\Socket\SocketWindows.cpp" />
+    <ClCompile Include="..\..\src\SoundManager\SoundManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Client.hpp" />
+    <ClInclude Include="..\..\src\ClockManager\ClockManager.hpp" />
+    <ClInclude Include="..\..\src\Defines\Defines.hpp" />
+    <ClInclude Include="..\..\src\Defines\Vect2.hpp" />
+    <ClInclude Include="..\..\src\Defines\Vect2f.hpp" />
+    <ClInclude Include="..\..\src\Game\Entity.hpp" />
+    <ClInclude Include="..\..\src\Game\Game.hpp" />
+    <ClInclude Include="..\..\src\Game\GameEnd.hpp" />
+    <ClInclude Include="..\..\src\Game\GameTime.hpp" />
+    <ClInclude Include="..\..\src\Game\Player.hpp" />
+    <ClInclude Include="..\..\src\KeyManager\KeyManager.hpp" />
+    <ClInclude Include="..\..\src\Menu\InRoom.hpp" />
+    <ClInclude Include="..\..\src\Menu\Menu.hpp" />
+    <ClInclude Include="..\..\src\Menu\RoomSelection.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\AsteroidRender.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\BossRender.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\BulletRender.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\MinionRender.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\PlayerRender.hpp" />
+    <ClInclude Include="..\..\src\Render\EntityRender\ShockWaveRender.hpp" />
+    <ClInclude Include="..\..\src\Render\GameRender.hpp" />
+    <ClInclude Include="..\..\src\Render\MenuRender.hpp" />
+    <ClInclude Include="..\..\src\Render\Render.hpp" />
+    <ClInclude Include="..\..\src\Render\RoomRender.hpp" />
+    <ClInclude Include="..\..\src\Render\RoomSelectionRender.hpp" />
+    <ClInclude Include="..\..\src\ResourcePath.hpp" />
+    <ClInclude Include="..\..\src\Singleton.h" />
+    <ClInclude Include="..\..\src\Socket\ISocket.hpp" />
+    <ClInclude Include="..\..\src\Socket\Message.hpp" />
+    <ClInclude Include="..\..\src\Socket\SocketWindows.hpp" />
+    <ClInclude Include="..\..\src\SoundManager\SoundManager.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

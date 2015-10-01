@@ -1,0 +1,24 @@
+#user
+client/xCodeClient/R-Type.xcodeproj/project.xcworkspace/xcuserdata/zhoufong.xcuserdatad/UserInterfaceState.xcuserstate
+server/xcodeRtypeServer/R-TypeServer.xcodeproj/project.xcworkspace/xcuserdata/zhoufong.xcuserdatad/UserInterfaceState.xcuserstate
+
+#DS_STORE
+*.DS_Store
+
+#linked
+*.o
+*.idx
+*.strings-sym
+*.strings-res
+*.xcindexdb-wal
+*.xcindexdb-shm
+*.xcindexdb
+*.hmap
+*.db
+
+#temporary files
+*~
+
+#derived data
+server/xcodeRtypeServer/DerivedData/
+client/xCodeClient/DerivedData/

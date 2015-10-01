@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Room">
+      <UniqueIdentifier>{b4db12a8-2099-43be-ba06-2433db2754c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Room">
+      <UniqueIdentifier>{ecf73325-67d8-417c-9f2a-b9938d41b270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{d3313d25-0268-45f8-9861-cb79a36ea407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity">
+      <UniqueIdentifier>{e72bd270-52ab-4e7f-9bfb-cde20f346a6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{3de19563-721b-451e-8836-1bc91f7b3bca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Socket">
+      <UniqueIdentifier>{3fc848ff-2a8e-47d0-8c8d-53477c3374a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Socket">
+      <UniqueIdentifier>{19bb2d7f-10d3-4384-8be5-93ff404e50d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ThreadWindows">
+      <UniqueIdentifier>{e4a6abc2-2923-4658-a500-032972c31797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ThreadWindows">
+      <UniqueIdentifier>{1bf2cc93-17d8-4a3f-931b-d324bceab71d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Player.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Room\Room.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Entity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Socket\SocketWindows.cpp">
+      <Filter>Source Files\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Socket\Message.cpp">
+      <Filter>Source Files\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ThreadWindows\ThreadPool.cpp">
+      <Filter>Source Files\ThreadWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Bullet.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Asteroid.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\ShockWave.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Room\GameTime.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Room\Map.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Bonus.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Room\Game.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Room\QuadTree.cpp">
+      <Filter>Source Files\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\SpaceShip.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Boss.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\Weapon.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ThreadWindows\Thread.cpp">
+      <Filter>Source Files\ThreadWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Entity\MegaAttack.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Server.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Exception.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Room\Room.hpp">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Player.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\IEntity.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Entity.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\defines.hpp">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Vect2.hpp">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Socket\ISocket.hpp">
+      <Filter>Header Files\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Socket\SocketWindows.hpp">
+      <Filter>Header Files\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Socket\Message.hpp">
+      <Filter>Header Files\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadWindows\ThreadPool.hpp">
+      <Filter>Header Files\ThreadWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadWindows\Task.hpp">
+      <Filter>Header Files\ThreadWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Bullet.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Asteroid.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\ShockWave.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Room\GameTime.hpp">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Room\Map.hpp">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Bonus.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Room\Game.hpp">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Room\QuadTree.hpp">
+      <Filter>Header Files\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\SpaceShip.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Boss.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\Weapon.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadWindows\Lock.hpp">
+      <Filter>Header Files\ThreadWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadWindows\Thread.hpp">
+      <Filter>Header Files\ThreadWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadWindows\SafeQueue.hpp">
+      <Filter>Header Files\ThreadWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity\MegaAttack.hpp">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="visioRtypeServer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

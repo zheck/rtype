@@ -1,0 +1,157 @@
+							R-Type Group
+							October 2013
+
+
+
+	R-Type Client Server Protocol Transport over UDP and TCP
+	--------------------------------------------------------
+
+
+I. Introduction
+---------------
+
+This protocol is intended to provide the R-Type service. It is used to
+make available communication between clients and servers.
+
+
+II. Communication Protocol
+--------------------------
+
+The communication is performed by TCP connection. It allows a check-up to
+make sure connection between clients and server is up. Although connection is
+checked-up by TCP, datas are traded by UDP since R-type does not have to receive
+all the packets.
+
+
+III. Client to Server :
+-----------------------
+
+To connect to the server, Clients need to put the Server IP adress. He also must choose
+a nickname.
+
+Example: 
+
+   Example:
+              +------------+----------+---------------+
+              |    TYPE    |   SIZE   |    MESSAGE    |
+              +------------+----------+---------------+
+   - login:   |      0     |    0     |  PlayerName   |
+              +------------+----------+---------------+
+   - quit:    |      1     |    0     |               |
+              +------------+----------+---------------+
+
+1) Menu
+-------
+
+Once Nickname is chosen, you'll get to the menu.
+
+   Example:
+                        +------------+----------+---------------------+
+                        |    TYPE    |   SIZE   |       MESSAGE       |
+                        +------------+----------+---------------------+
+   - get the game list: |      2     |     0    |       GameList      |
+                        +------------+----------+---------------------+
+   - join a game:       |      3     |     X    |       GameId        |
+                        +------------+----------+---------------------+
+   - create a game:     |      4     |     X    |       GameName      |
+                        +------------+----------+---------------------+
+   - launch the game:   |      5     |     X    |                     |
+                        +------------+----------+---------------------+
+
+2) Game
+-------
+
+During the game, the player will need to survive by shooting enemies and/or
+dodging/ their attacks.
+
+   Example:
+                        +------------+----------+---------------------+
+                        |    TYPE    |   SIZE   |       MESSAGE       |
+                        +------------+----------+---------------------+
+   - moves:             |      6     |     0    |    DirectionVector  |
+                        +------------+----------+---------------------+
+   - shoot:             |      7     |     0    |                     |
+                        +------------+----------+---------------------+
+   - drop weapon:       |      8     |     0    |                     |
+			+------------+----------+---------------------+
+   - isAlive ?:         |      9     |     0    |                     |
+                        +------------+----------+---------------------+
+   - quit the game:     |     10     |     0    |                     |
+                        +------------+----------+---------------------+
+
+
+IV. Server to client :
+----------------------
+
+The server will check if clients are up during whole game. It will, in first time,
+check if client successfully logged in or not.
+
+   Example:
+              +------------+----------+---------------+
+              |    TYPE    |   SIZE   |    MESSAGE    |
+              +------------+----------+---------------+
+   - loginok: |      0     |    0     |               |
+              +------------+----------+---------------+
+   - quitko:  |      1     |    0     |               |
+              +------------+----------+---------------+
+
+1) Menu
+-------
+
+This part shows server answers to client(s).
+
+   Example:
+                        +------------+----------+---------------------+
+                        |    TYPE    |   SIZE   |       MESSAGE       |
+                        +------------+----------+---------------------+
+   - current game list: |      2     |     0    |       GameList      |
+                        +------------+----------+---------------------+
+   - join a game:       |      3     |     X    |       GameId        |
+                        +------------+----------+---------------------+
+   - create a game:     |      4     |     X    |       GameName      |
+                        +------------+----------+---------------------+
+   - launch the game:   |      5     |     X    |                     |
+                        +------------+----------+---------------------+
+
+2) Game
+-------
+
+During the game, the server send datas through UDP to client(s).
+
+   Example:
+                        +------------+----------+---------------------+
+                        |    TYPE    |   SIZE   |       MESSAGE       |
+                        +------------+----------+---------------------+
+   - player joins game: |      6     |     X    |       PlayerName    |
+                        +------------+----------+---------------------+
+   - moves:             |      7     |     X    | Player/MonsterId:x: |
+			|	     |		|   y:DirectionVector |
+                        +------------+----------+---------------------+
+   - shoot:             |      8     |     X    |  Player/MonsterId:  |
+                        |            |          |      WeaponId       |
+			|	     |	    	|    DirectionVector  |
+                        +------------+----------+---------------------+
+   - player's alive:    |      9     |     1    |      PlayerId       |
+			+------------+----------+---------------------+
+   - player drop weapon:|     10     |     1    |      PlayerId       |
+                        +------------+----------+---------------------+
+   - player leave game: |     11     |     1    |      PlayerId       |
+                        +------------+----------+---------------------+
+
+V. References
+-------------
+
+PlayerName: Nickname chosen on loggin.
+DirectionVector: Direction vector refering to the direction of the movement
+the KeyManager has returned.
+MonsterId: Monster identifiant.
+PlayerId: Player file descriptor.
+WeaponId: Weapon identifiant.
+
+V. Authors
+----------
+
+Rtype Group :
+
+Fong ZHOU
+Renxao MO

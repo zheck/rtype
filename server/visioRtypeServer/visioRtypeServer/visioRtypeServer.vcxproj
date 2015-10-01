@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Entity\Asteroid.cpp" />
+    <ClCompile Include="..\..\src\Entity\Bonus.cpp" />
+    <ClCompile Include="..\..\src\Entity\Boss.cpp" />
+    <ClCompile Include="..\..\src\Entity\Bullet.cpp" />
+    <ClCompile Include="..\..\src\Entity\Entity.cpp" />
+    <ClCompile Include="..\..\src\Entity\MegaAttack.cpp" />
+    <ClCompile Include="..\..\src\Entity\Player.cpp" />
+    <ClCompile Include="..\..\src\Entity\ShockWave.cpp" />
+    <ClCompile Include="..\..\src\Entity\SpaceShip.cpp" />
+    <ClCompile Include="..\..\src\Entity\Weapon.cpp" />
+    <ClCompile Include="..\..\src\Exception.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Room\Game.cpp" />
+    <ClCompile Include="..\..\src\Room\GameTime.cpp" />
+    <ClCompile Include="..\..\src\Room\Map.cpp" />
+    <ClCompile Include="..\..\src\Room\QuadTree.cpp" />
+    <ClCompile Include="..\..\src\Room\Room.cpp" />
+    <ClCompile Include="..\..\src\Server.cpp" />
+    <ClCompile Include="..\..\src\Socket\Message.cpp" />
+    <ClCompile Include="..\..\src\Socket\SocketWindows.cpp" />
+    <ClCompile Include="..\..\src\ThreadWindows\Thread.cpp" />
+    <ClCompile Include="..\..\src\ThreadWindows\ThreadPool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\defines.hpp" />
+    <ClInclude Include="..\..\include\Vect2.hpp" />
+    <ClInclude Include="..\..\src\Entity\Asteroid.hpp" />
+    <ClInclude Include="..\..\src\Entity\Bonus.hpp" />
+    <ClInclude Include="..\..\src\Entity\Boss.hpp" />
+    <ClInclude Include="..\..\src\Entity\Bullet.hpp" />
+    <ClInclude Include="..\..\src\Entity\Entity.hpp" />
+    <ClInclude Include="..\..\src\Entity\IEntity.hpp" />
+    <ClInclude Include="..\..\src\Entity\MegaAttack.hpp" />
+    <ClInclude Include="..\..\src\Entity\Player.hpp" />
+    <ClInclude Include="..\..\src\Entity\ShockWave.hpp" />
+    <ClInclude Include="..\..\src\Entity\SpaceShip.hpp" />
+    <ClInclude Include="..\..\src\Entity\Weapon.hpp" />
+    <ClInclude Include="..\..\src\Exception.hpp" />
+    <ClInclude Include="..\..\src\Room\Game.hpp" />
+    <ClInclude Include="..\..\src\Room\GameTime.hpp" />
+    <ClInclude Include="..\..\src\Room\Map.hpp" />
+    <ClInclude Include="..\..\src\Room\QuadTree.hpp" />
+    <ClInclude Include="..\..\src\Room\Room.hpp" />
+    <ClInclude Include="..\..\src\Server.hpp" />
+    <ClInclude Include="..\..\src\Socket\ISocket.hpp" />
+    <ClInclude Include="..\..\src\Socket\Message.hpp" />
+    <ClInclude Include="..\..\src\Socket\SocketWindows.hpp" />
+    <ClInclude Include="..\..\src\ThreadWindows\Lock.hpp" />
+    <ClInclude Include="..\..\src\ThreadWindows\SafeQueue.hpp" />
+    <ClInclude Include="..\..\src\ThreadWindows\Task.hpp" />
+    <ClInclude Include="..\..\src\ThreadWindows\Thread.hpp" />
+    <ClInclude Include="..\..\src\ThreadWindows\ThreadPool.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="visioRtypeServer.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E27A673-43B1-40C7-A31F-FF7374984A52}</ProjectGuid>
+    <RootNamespace>visioRtypeServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src;..\..\include;..\..\src\Room;..\..\src\Socket;..\..\src\Entity;..\..\src\ThreadWindows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\include;..\..\src\Room;..\..\src\Socket;..\..\src\Entity;..\..\src\ThreadWindows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
